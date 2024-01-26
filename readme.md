@@ -23,13 +23,12 @@ vite.config.ts
 ``` TypeScript
 import { defineConfig } from 'vite';
 import { VitePluginNode } from 'vite-plugin-node';
-import path from 'path'
 
 export default defineConfig({
   // ...vite configures
   server: {
     // vite server configs, for details see [vite doc](https://vitejs.dev/config/#server-host)
-    port: 3001
+    port: 3000
   },
   plugins: [
     ...VitePluginNode({
@@ -74,11 +73,6 @@ export default defineConfig({
       swcOptions: {}
     })
   ],
-  resolve: {
-    alias: {
-      '#root': path.resolve(__dirname, './'),
-    },
-  },
   optimizeDeps: {
     // Vite does not work well with optionnal dependencies,
     // you can mark them as ignored for now
@@ -94,6 +88,26 @@ export default defineConfig({
   },
 });
 ```
+
+подключаем express
+
+``` bash
+npm i express
+```
+
+создаём файл 
+
+``` bash
+app.ts
+```
+
+в нём пишем
+
+``` TypeScript
+ааппаапап
+```
+
+
 
 
 
