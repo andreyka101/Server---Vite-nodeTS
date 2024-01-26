@@ -119,10 +119,45 @@ app.get('/',(req,res)=>{
 
 // Запуск на проде
 if (import.meta.env.PROD)
-  app.listen(3900)
+  app.listen(3000)
 
 // Запуск в DEV режиме
 export const viteNodeApp = app
+```
+
+создаём файл для конфигураций ts
+
+``` bash
+tsconfig.json
+```
+
+в нём пишем
+
+``` json
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "moduleResolution": "node",
+    "strict": true,
+    "declaration": true,
+    "noUnusedLocals": true,
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
+    "types": ["node", "vite/client"],
+    // compile away optional-chaining-operator
+    // node support table: https://node.green/#ES2020-features-optional-chaining-operator-----
+    "target": "esnext",
+    "module": "esnext",
+    "lib": [
+      "ESNext"
+    ],
+    "sourceMap": true,
+  },
+  "exclude": [
+    "dist",
+    "node_modules"
+  ]
+}
 ```
 
 
