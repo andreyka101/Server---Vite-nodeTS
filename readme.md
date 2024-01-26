@@ -95,6 +95,12 @@ export default defineConfig({
 npm i express
 ```
 
+подключаем типы express
+
+``` bash
+npm i --save-dev @types/express
+```
+
 создаём файл 
 
 ``` bash
@@ -104,7 +110,19 @@ app.ts
 в нём пишем
 
 ``` TypeScript
-ааппаапап
+import express from 'express'
+const app = express()
+
+app.get('/',(req,res)=>{
+  res.sent("hi")
+})
+
+// Запуск на проде
+if (import.meta.env.PROD)
+  app.listen(3900)
+
+// Запуск в DEV режиме
+export const viteNodeApp = app
 ```
 
 
