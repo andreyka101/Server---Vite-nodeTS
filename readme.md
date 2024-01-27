@@ -160,9 +160,26 @@ tsconfig.json
 }
 ```
 
+теперь можно проверить наш сервер сервер
+<br/>
+открываем package.json и в scripts пишем :
 
+```json
+"dev":"vite",
+"build":"vite build"
+```
 
+запуск сервера :
 
+```bash
+npm run dev
+```
+
+построить сервер :
+
+```bash
+npm run build
+```
 
 
 
