@@ -180,7 +180,3 @@ npm run dev
 ```bash
 npm run build
 ```
-
-
-
-[Обычная ссылка в строке](https://www.google.com)
