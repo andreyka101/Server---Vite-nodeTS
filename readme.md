@@ -146,8 +146,6 @@ tsconfig.json
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "types": ["node", "vite/client"],
-    // compile away optional-chaining-operator
-    // node support table: https://node.green/#ES2020-features-optional-chaining-operator-----
     "target": "esnext",
     "module": "esnext",
     "lib": [
